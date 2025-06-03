@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300;
+  font-family: 'Inter', sans-serif; /* Add a nice sans-serif font, ensure you import it in index.html or via CSS */
+}
+
+/* Add this to your public/index.html <head> for the font */
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+/* Custom scrollbar for a cleaner look (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-200 dark:bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 dark:bg-indigo-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-600 dark:bg-indigo-700;
+}
